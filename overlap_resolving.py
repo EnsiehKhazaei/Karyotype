@@ -3,12 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import sys
-import time
-
-
-#start timing
-# start_time = time.time()
-
 
 # graph first level vertex class
 class Vertex:
@@ -151,7 +145,6 @@ def distance(a, b):
 
 def get_nodes_mean(n):
     cross_nodes_mean = tuple([sum(x)/len(n) for x in zip(*n)])
-    # return min(g, key=lambda x: distance(x, cross_nodes_mean))
     return list(np.round(cross_nodes_mean))
 
 
@@ -181,7 +174,6 @@ def prune(end_nodes, cross_nodes, verts, prune_size=5):
 
 
 def shift_contour(contour, colls):
-    # print(contour)
     for i in range(len(contour)):
         if contour[i] in colls:
             s = i
@@ -270,7 +262,6 @@ def get_cross_node_direction(node, c_nodes, e_nodes, verts):
                 break
             for v in node_u.neighbors:
                 if v in c_nodes and v != node.name and v not in cross_nodes_group:
-                    # print('aaaaa', node.name, v)
                     cross_nodes_group.append(v)
                     break
                 node_v = verts[v]
@@ -293,7 +284,6 @@ def get_end_node_direction(node, verts):
         seen.append(node_u.name)
         if len(seen) == 6:
             node.slopes = get_fitted_line_slope(seen, node, verts)
-            # print(node.position, node.slopes)
             break
         for v in node_u.neighbors:
             node_v = verts[v]
@@ -337,7 +327,6 @@ def get_collision_with_contour(e_nodes, c_nodes, contour, verts, contour_verts):
             collision_points.append(CollisionNode(str(c) + str(int(pos[0])) + str(int(pos[1])),
                                                   find_neighbors(pos, contour_verts), pos, c, True))
     c_nodes_groups = merge_lists_with_common_items(c_nodes_groups)
-    # print('c_nodes_groups', c_nodes_groups)
     chosen_nodes = [x[0] for x in c_nodes_groups]
     for e in e_nodes:
         pos = verts[e].position
@@ -423,8 +412,7 @@ def add_inner_contours(all_nodes, all_contours, verts):
                 nearest_positions[c].append((pos, distance(pos, verts[c].position)))
     for _, v in nearest_positions.items():
         v.sort(key=lambda tup: tup[1])
-    # for k, v in nearest_positions.items():
-    #     print(k, v)
+
     for c in set(c_nodes):
         for i in range(4 - c_nodes.count(c)):
             if len(nearest_positions[c]) != 0:
@@ -454,11 +442,9 @@ def get_nodes(colls, mean_points, contour):
         if contour[i] in collision_positions:
             indexes.append((i, contour[i]))
     indexes.append(indexes[0])
-    # print([collisions[i].nearest_cross_node for i in indexes])
     indexes_coll_points = [get_collision_point_by_position(i[1], colls) for i in indexes]
     closest_nodes = []
     for i in range(len(indexes) - 1):
-        # print(indexes_coll_points[i].c_collision)
         if i == len(indexes) - 2:
             curr_c_node = indexes_coll_points[i].nearest_cross_node
             curr_c_collision = indexes_coll_points[i].c_collision
@@ -471,7 +457,6 @@ def get_nodes(colls, mean_points, contour):
             next_c_node = indexes_coll_points[i + 1].nearest_cross_node
             next_c_collision = indexes_coll_points[i + 1].c_collision
             current_range = contour[indexes[i][0]: indexes[i + 1][0]]
-            # print(curr_c_node, next_c_node)
         if curr_c_node == next_c_node:
             if curr_c_collision is True:
                 closest_nodes.append(FinalNode(indexes_coll_points[i].name, indexes_coll_points[i].name,
@@ -504,7 +489,7 @@ def get_nodes(colls, mean_points, contour):
                         FinalNode(indexes_coll_points[i].name, indexes_coll_points[i + 1].name, curr_c_node, nearest_pos1))
                     closest_nodes.append(
                         FinalNode(indexes_coll_points[i].name, indexes_coll_points[i + 1].name, next_c_node, nearest_pos2))
-    # print('kkkkkk')
+
     return closest_nodes
 
 
