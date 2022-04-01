@@ -1,35 +1,16 @@
 ## Define SECNN architecture 
-import os
 import numpy as np
 import pandas as pd
-import itertools
 import seaborn as sn
 import keras
-import tensorflow as tf
 import matplotlib.pyplot as plt
 
-from keras.models import Sequential
-from keras.utils import to_categorical
-from keras.preprocessing import image
-from keras.applications.vgg16 import preprocess_input
-from random import shuffle
-from keras.models import load_model
+
 from sklearn.metrics import confusion_matrix
-from keras import regularizers
-from sklearn.model_selection import StratifiedKFold
-from sklearn.model_selection import KFold
-from keras.models import model_from_json
-from keras.layers import AveragePooling2D, Input, Flatten
-from keras.regularizers import l2
-from keras.layers import Dense, Conv2D, BatchNormalization, Activation, Dropout, Reshape, Lambda, LSTM, TimeDistributed, multiply, Dot, Concatenate
-from keras.layers import AveragePooling2D, Input, Flatten, MaxPooling2D
-from keras.optimizers import Adam
-from keras.callbacks import ModelCheckpoint, LearningRateScheduler
-from keras.callbacks import ReduceLROnPlateau
-from keras.preprocessing.image import ImageDataGenerator
-from keras import backend as K
+from keras.layers import Input, Flatten
+from keras.layers import Dense, Conv2D, BatchNormalization, Dropout, multiply, Concatenate
+from keras.layers import MaxPooling2D, GlobalAveragePooling2D
 from keras.models import Model
-from keras import optimizers
 
 def squeeze_excite_block(input,ch, ratio=16):
     init = input
