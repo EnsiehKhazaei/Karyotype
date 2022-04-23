@@ -1,5 +1,26 @@
 # Analysis of Karyotype Images
+## Introduction
 Karyotype is a genetic test that is used for detection of chromosomal defects. In a karyotype test, an image is captured from chromosomes during the cell division. The captured images are then analyzed by cytogeneticists in order to detect possible chromosomal defects. In this research, we have proposed an automated pipeline for analysis of karyotype images. There are three main steps for karyotype image analysis: image enhancement, image segmentation and chromosome classification. In this research, we have proposed a novel chromosome segmentation algorithm to decompose overlapped chromosomes. We have also proposed a CNN-based classifier which outperforms all the existing classifiers. 
+
+## Guideline
+<details>
+<summary>Chromosome resolving</summary>
+First, run the [main_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/main_resolving.py).
+There are two functions at the end of [overlap_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/overlap_resolving.py) file:
+
+1. “plot_overlap_org_img”: returning the overlap points for the original image 
+2. “plot_overlap_contour”: returning the contour image for the original image 
+  
+ Results are saved in [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/output_resolving) folder. You can find samples for the 1 and 3 images in the [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/output_resolving) folder.
+
+Step1. Install YOLOX from source.
+```shell
+git clone git@github.com:Megvii-BaseDetection/YOLOX.git
+cd YOLOX
+pip3 install -v -e .  # or  python3 setup.py develop
+```
+
+</details>
 
 # Results
 Our classifier is trained by a dataset of about 162,000 human chromosome images. The success rate of our segmentation algorithm is 95%. In addition, our experimental
