@@ -5,7 +5,7 @@ Karyotype is a genetic test that is used for detection of chromosomal defects. I
 ## Guideline
 <details>
 <summary>Chromosome resolving</summary>
-First, run the [main_resolving.py](./main_resolving.py) .
+First, run the [main_resolving](https://github.com/EnsiehKhazaei/Karyotype/blob/main/main_resolving.py) file.
 There are two functions at the end of [overlap_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/overlap_resolving.py) file:
 
 1. “plot_overlap_org_img”: returning the overlap points for the original image 
