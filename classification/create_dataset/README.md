@@ -16,7 +16,7 @@ $DATADIR/
 
 ```
 2. Run the [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py) on all chromosome images and save the results as a text file with the same name at `DATADIR/FeatureTxts`.
-3. 
+3. Run the [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py
 ```
 line 46: image_sets=[('2007', 'trainval')]
 line 104: image_sets=[('2007', 'test')]
