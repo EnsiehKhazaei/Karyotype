@@ -5,7 +5,6 @@ Karyotype is a genetic test that is used for detection of chromosomal defects. I
 ## Guideline
 <details>
 <summary>Chromosome resolving</summary>
- 
  First, run the [main_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/chromosome_resolving/main_resolving.py) file.
  
  There are two functions at the end of [overlap_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/chromosome_resolving/overlap_resolving.py) file:
@@ -19,13 +18,15 @@ Karyotype is a genetic test that is used for detection of chromosomal defects. I
 
 <details>
 <summary>Create dataset</summary>
+ 
 After segmentation of original karyotype images, you have the images of chromosomes seperately and the following instructions explain how to provide the dataset for training neural networks. 
 1. Provide a directory with the following structure and put all of your chromosome images in the `DATADIR/JPEGImages`.
-```
+```shell
 $DATADIR/
 |---- JPEGImages/
 |---- FeatureTxts/
 ```
+ 
 2. Run the [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py) on all chromosome images and save the results as a text file with the same name at `DATADIR/FeatureTxts`.
 
 3. Run the [create_dataset.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/create_dataset.py) to creat the training set in order to train your deep neural network.
@@ -33,6 +34,7 @@ $DATADIR/
 
 <details>
 <summary>Classification</summary>
+ 
  All codes of deep neural networks which are used in this research exist at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. In addition, we put the confusion matrixes of all neural networks at [confusion_matrixes](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/confusion_matrixes) folder. 
 
 </details>
