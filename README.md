@@ -6,14 +6,14 @@ Karyotype is a genetic test that is used for detection of chromosomal defects. I
 <details>
 <summary>Chromosome resolving</summary>
  
- First, run the [main_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/main_resolving.py) file.
+ First, run the [main_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/chromosome_resolving/main_resolving.py) file.
  
- There are two functions at the end of [overlap_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/overlap_resolving.py) file:
+ There are two functions at the end of [overlap_resolving.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/chromosome_resolving/overlap_resolving.py) file:
 
  1. “plot_overlap_org_img”: returning the overlapped points for the original image 
  2. “plot_overlap_contour”: returning the contour image for the original image 
   
- Results are saved in [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/output_resolving) folder. You can find samples for the 1 and 3 images in the [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/output_resolving) folder.
+ Results are saved in [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/chromosome_resolving/output_resolving) folder. You can find samples for the 1 and 3 images in the [output_resolving](https://github.com/EnsiehKhazaei/Karyotype/tree/main/chromosome_resolving/output_resolving) folder.
 
 </details>
 
