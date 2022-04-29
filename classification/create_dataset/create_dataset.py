@@ -39,8 +39,8 @@ def add_padding(im):
   return new_im
 
 ## Create  dataset
-imgs_dir = 'images/'
-txts_dir = ''
+imgs_dir = 'DATADIR/JPEGImages'
+txts_dir = 'DATADIR/FeatureTxts'
 num_cls = 24
 
 X_train = []
