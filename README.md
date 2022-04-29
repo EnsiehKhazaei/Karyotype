@@ -45,6 +45,6 @@ Our classifier is trained by a dataset of about 162,000 human chromosome images.
 results show that the accuracy of our classifier for human chromosomes is 92.63% and our novel post-processing algorithm increases the classification results to 94%.
 
 # Contact
-For questions about our paper or code, please contact [Ensieh Khazaei](mailto:khazaei1394@gmail.com).
+For questions about our paper or code, please contact [Ensieh Khazaei](mailto:khazaei1394@gmail.com) and [Ala Emrany](mailto:emranyala@gmail.com).
 
 
