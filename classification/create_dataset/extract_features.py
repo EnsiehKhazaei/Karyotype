@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 def binarizeImage(image):
 
@@ -28,11 +29,19 @@ def extract_length(img):
 
 
 #Load the image in grayscale
-img_path = 'F:/chromosome/chromosomes/chromosomes/4_02/chr-3-1.jpg'
-img = cv2.imread(img_path)
+img_path = 'DATADIR/JPEGImages'
+txt_path = 'DATADIR/FeatureTxts'
+for name in os.listdir(img_path):
+    img = cv2.imread(os.path.join(img_path, name))
 
-binarize_img, area = extract_area(img)
-cv2.imwrite('binary.jpg', binarize_img)
+    binarize_img, area = extract_area(img)
+    cv2.imwrite('binary.jpg', binarize_img)
 
-skeleton, length = extract_length(img)
-cv2.imwrite('skel.jpg', skeleton)
+    skeleton, length = extract_length(img)
+    cv2.imwrite('skel.jpg', skeleton)
+    
+    f = open(os.path.join(txt_path, name.split('.')[0]+'.txt'), 'w')
+    f.write(str(area)+'\n')
+    f.write(str(length)+'\n')
+    f.close()
+    
