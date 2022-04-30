@@ -28,15 +28,21 @@ $DATADIR/
 |---- FeatureTxts/
 ```
  
-2. Run the [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py) on all chromosome images and save the results as a text file with the same name at `DATADIR/FeatureTxts`.
+2. Run the [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py) on all chromosome images in order to calculate the length and area features for each chromosome image. You shoud change the file paths in this code.
+ ```shell
+ img_path = 'DATADIR/JPEGImages' # directory of input images
+ txt_path = 'DATADIR/FeatureTxts' # directory for saving text files
+ ```
+ 
+ [extract_features.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/extract_features.py) saves the results (area and length features) as a text file with the same name at `DATADIR/FeatureTxts`.
 
-3. Run the [create_dataset.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/create_dataset.py) to creat the training set in order to train your deep neural network.
+3. Run the [create_dataset.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/create_dataset.py) to creat the training set in order to train your deep neural network. The input of [create_dataset.py](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/create_dataset/create_dataset.py) is the images and text files path and the outputs of this code are `X_train`, `X_area_train`, `X_length_train`, and `y_train`. 
 </details>
 
 <details>
 <summary>Classification</summary>
  
- All codes of deep neural networks which are used in this research exist at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. In addition, we put the confusion matrixes of all neural networks at [confusion_matrixes](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/confusion_matrixes) folder. 
+ All codes of deep neural networks which are used in this research exist at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. In addition, we put the confusion matrixes of all neural networks at [confusion_matrixes](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/confusion_matrixes) folder. In order to train the deep neural networks, you should create your dataset using the instructions in the previous part and then run the code of your desired neural network at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. The outputs of these codes are the weight of trained model, plot of accuracy and loss during training, and confusion matrix of the model.
 
 </details>
 
