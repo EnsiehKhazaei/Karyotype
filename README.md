@@ -44,6 +44,7 @@ $DATADIR/
  
  All codes of deep neural networks which are used in this research exist at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. In addition, we put the confusion matrixes of all neural networks at [confusion_matrixes](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification/confusion_matrixes) folder. In order to train the deep neural networks, you should create your dataset using the instructions in the previous part and then run the code of your desired neural network at [classification](https://github.com/EnsiehKhazaei/Karyotype/blob/main/classification) directory. The outputs of these codes are the weight of trained model, plot of accuracy and loss during training, and confusion matrix of the model.
 
+ After training our models, we perform the trained model on the segmented chromosomes of a sample and then the output of the model is the chromosome lables which are 1 to 24. Now, according the results of the classifier, it is possible to detect the abnormal chromosomes.
 </details>
 
 # Results
