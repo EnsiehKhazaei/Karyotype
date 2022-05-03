@@ -50,14 +50,23 @@ $DATADIR/
 ## Results
 Our classifier is trained by a dataset of about 162,000 human chromosome images and the success rate of our segmentation algorithm is 95%. In addition, our experimental
 results show that the accuracy of our classifier for human chromosomes is 92.63% and our novel post-processing algorithm increases the classification results to 94%.
-We put some output of our chromosome resolving algorithm and our proposed pipeline in the follwing.
-### overlap resolving
-Four samples of overlapped chromosomes and the results of our algorithm are shown in the follwing image. 
+We put some outputs of our chromosome resolving algorithm and our proposed pipeline in the follwing.
+<details>
+<summary>Chromosome resolving results</summary>
+Four samples of overlapped chromosomes and the results of our algorithm on them are shown in the follwing image. 
 
 <div align="center"><img src="/chromosome_resolving/output_resolving/4_sample_overlap_resolving.png" width="700"></div>
 
-
 The two first sample show two overlapped chromosomes while the third and forth samples show the success of our algorithm on three overlapped chromosomes. Furthermore, in the forth sample, the overlapped chromosomes created a loop, however our chromosome resolving algorithm successfully separates them.
+</details>
+
+<details>
+<summary>Classificaiton results</summary>
+Two samples of raw karyotype images and the results of our new neural network on them are shown in the follwing image. First, the raw karyotype images are preprocessed to enhance their quality for further steps and then using the overlapped resolving algorithm, we separate the overlapped chromosomes. Finally, our deep neural network (SECNN) is performed on the segmented chromosomes to classify them.
+
+<div align="center"><img src="/classification/output_classification/2_sample_classification_output.png" width="800"></div>
+
+</details>
 
 ## Contact
 For questions about our paper or code, please contact [Ensieh Khazaei](mailto:khazaei1394@gmail.com) and [Ala Emrany](mailto:emranyala@gmail.com).
