@@ -54,7 +54,7 @@ We put some output of our chromosome resolving algorithm and our proposed pipeli
 ### overlap resolving
 Four samples of overlapped chromosomes and the results of our algorithm are shown in the follwing image. 
 
-<div align="center"><img src="/chromosome_resolving/output_resolving/4_sample_overlap_resolving.png" width="1000"></div>
+<div align="center"><img src="/chromosome_resolving/output_resolving/4_sample_overlap_resolving.png" width="700"></div>
 
 
 The two first sample show two overlapped chromosomes while the third and forth samples show the success of our algorithm on three overlapped chromosomes. Furthermore, in the forth sample, the overlapped chromosomes created a loop, however our chromosome resolving algorithm successfully separates them.
