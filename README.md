@@ -47,11 +47,15 @@ $DATADIR/
  After training our models, we perform the trained model on the segmented chromosomes of a sample and then the output of the model is the chromosome lables which are from 1 to 24. Finally, according the results of the classifier, it is possible to detect the abnormal chromosomes.
 </details>
 
-# Results
-Our classifier is trained by a dataset of about 162,000 human chromosome images. The success rate of our segmentation algorithm is 95%. In addition, our experimental
+## Results
+Our classifier is trained by a dataset of about 162,000 human chromosome images and the success rate of our segmentation algorithm is 95%. In addition, our experimental
 results show that the accuracy of our classifier for human chromosomes is 92.63% and our novel post-processing algorithm increases the classification results to 94%.
+We put some output of our chromosome resolving algorithm and our proposed pipeline in the follwing.
+### overlap resolving
+Four samples of overlapped chromosomes and the results of our algorithm are shown in the follwing image. 
 
-# Contact
+
+## Contact
 For questions about our paper or code, please contact [Ensieh Khazaei](mailto:khazaei1394@gmail.com) and [Ala Emrany](mailto:emranyala@gmail.com).
 
 
