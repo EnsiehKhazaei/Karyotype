@@ -64,7 +64,7 @@ The two first sample show two overlapped chromosomes while the third and forth s
 <summary>Classificaiton results</summary>
 Two samples of raw karyotype images and the results of our new neural network on them are shown in the follwing image. First, the raw karyotype images are preprocessed to enhance their quality for further steps and then using the overlapped resolving algorithm, we separate the overlapped chromosomes. Finally, our deep neural network (SECNN) is performed on the segmented chromosomes to classify them.
 
-<div align="center"><img src="/classification/output_classification/2_sample_classification_output.png" width="800"></div>
+<div align="center"><img src="/classification/output_classification/2_sample_classification_output.png" width="1000"></div>
 
 </details>
 
