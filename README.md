@@ -53,7 +53,9 @@ results show that the accuracy of our classifier for human chromosomes is 92.63%
 We put some output of our chromosome resolving algorithm and our proposed pipeline in the follwing.
 ### overlap resolving
 Four samples of overlapped chromosomes and the results of our algorithm are shown in the follwing image. 
+<img src="https://github.com/EnsiehKhazaei/Karyotype/tree/main/chromosome_resolving/output_resolving/4_sample_overlap_resolving.png" >
 
+The two first sample show two overlapped chromosomes while the third and forth samples show the success of our algorithm on three overlapped chromosomes. Furthermore, in the forth sample, the overlapped chromosomes created a loop, however our chromosome resolving algorithm successfully separates them.
 
 ## Contact
 For questions about our paper or code, please contact [Ensieh Khazaei](mailto:khazaei1394@gmail.com) and [Ala Emrany](mailto:emranyala@gmail.com).
