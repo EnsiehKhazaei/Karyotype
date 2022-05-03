@@ -55,6 +55,7 @@ We put some outputs of our chromosome resolving algorithm and our proposed pipel
 <summary>Chromosome resolving results</summary>
 Four samples of overlapped chromosomes and the results of our algorithm on them are shown in the follwing image. 
 
+ 
 <div align="center"><img src="/chromosome_resolving/output_resolving/4_sample_overlap_resolving.png" width="700"></div>
 
 The two first sample show two overlapped chromosomes while the third and forth samples show the success of our algorithm on three overlapped chromosomes. Furthermore, in the forth sample, the overlapped chromosomes created a loop, however our chromosome resolving algorithm successfully separates them.
@@ -64,6 +65,7 @@ The two first sample show two overlapped chromosomes while the third and forth s
 <summary>Classificaiton results</summary>
 Two samples of raw karyotype images and the results of our new neural network on them are shown in the follwing image. First, the raw karyotype images are preprocessed to enhance their quality for further steps and then using the overlapped resolving algorithm, we separate the overlapped chromosomes. Finally, our deep neural network (SECNN) is performed on the segmented chromosomes to classify them.
 
+ 
 <div align="center"><img src="/classification/output_classification/2_sample_classification_output.png" width="1000"></div>
 
 </details>
